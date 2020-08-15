@@ -104,12 +104,12 @@ def Sampling(X,y, method):
 
     elif method == 'EditedNearestNeighbours':
         from imblearn.under_sampling import EditedNearestNeighbours 
-        us = EditedNearestNeighbours(random_state=42)
+        us = EditedNearestNeighbours()
         X_res, y_res = us.fit_resample(X, y)
 
     elif method == 'CondensedNearestNeighbour':
         from imblearn.under_sampling import CondensedNearestNeighbour 
-        us = CondensedNearestNeighbour(random_state=42)
+        us = CondensedNearestNeighbour()
         X_res, y_res = us.fit_resample(X, y)
     
     # Combination of over- and under-sampling:
