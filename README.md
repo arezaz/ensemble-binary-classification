@@ -12,7 +12,9 @@ Dependencies
 
 ### Overview
 
-Binary classification using an ensemble of XGBoost and LightGBM classifiers.
+Binary classification using an ensemble meta-classifier.
+The workflow trains multiple iterations of XGBoost and LightBGM on the data and optimally tunes their hyperparameters.
+Data sampling is also implemented for the imbalanced dataset scenario.
 The main workflow can be found in `main.py`.
 All functions used in the main flow can be found in `utils.py`.
 The function `gen_data()` needs to be modified according to dataset to encode all categorical features.
