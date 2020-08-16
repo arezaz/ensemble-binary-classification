@@ -1,13 +1,14 @@
 # meta-binary-classification
 
-Dependencies
-- [sklearn]
-- [xgboost]
-- [lightgbm]
-- [hyperopt]
-- [pandas]
-- [tqdm]
+Dependencies:
+- [sklearn '0.23.2']
+- [xgboost '1.1.1']
+- [lightgbm '2.3.1']
+- [hyperopt '0.2.4']
+- [pandas '1.0.1'] 
+- [tqdm '4.42.1']
 - [pickle]
+- [os]
 
 
 ### Overview
@@ -17,7 +18,7 @@ The workflow trains multiple iterations of XGBoost and LightBGM on the data and 
 Data sampling is also implemented for the imbalanced dataset scenario.
 The main workflow can be found in `main.py`.
 All functions used in the main flow can be found in `utils.py`.
-The function `gen_data()` needs to be modified according to dataset to encode all categorical features.
+After running multiple epochs of the flow use `EpochsAnalysis.ipynb` to compare and select the best epoch.
 
 ### Reference
 

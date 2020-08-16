@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 from utils import gen_data, iterModel, MetaClassifier, Sampling
 
 
-EPOCHS = 100 # number times that the flow will work through the entire dataset.
+EPOCHS = 10 # number times that the flow will work through the entire dataset.
 
 for i in tqdm(range(0,EPOCHS)):
 
