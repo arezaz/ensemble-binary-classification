@@ -71,10 +71,10 @@ for i in tqdm(range(0,EPOCHS)):
     # ---- A) save evaluation set predictions
     # --------- 1 - evaluation set prediction with submission format 
     filename = 'prediction-'+timestr+'.csv'
-    prediction_df[['scenario', 'prediction_score']].to_csv(pjoin(PATH_SAVE ,filename), index=False)
+    prediction_df[['dataset_id', 'prediction_score']].to_csv(pjoin(PATH_SAVE ,filename), index=False)
     # --------- 2 -evaluation set prediction also outputing predicted probabilities
     filename = 'prediction_proba-'+timestr+'.csv'
-    prediction_df[['scenario', 'prediction_score','prediction_score_proba']].to_csv(pjoin(PATH_SAVE ,filename), index=False) 
+    prediction_df[['dataset_id', 'prediction_score','prediction_score_proba']].to_csv(pjoin(PATH_SAVE ,filename), index=False) 
 
     #  ---- B) train set performance metrics summary
     filename = 'metrics-'+timestr+'.csv'
