@@ -7,6 +7,7 @@ Dependencies:
 - [sklearn '0.23.2']
 - [xgboost '1.1.1']
 - [lightgbm '2.3.1']
+- [imblearn '0.7.0']
 - [hyperopt '0.2.4']
 - [pandas '1.0.1'] 
 - [tqdm '4.42.1']
