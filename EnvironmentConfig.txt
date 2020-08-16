@@ -1,0 +1,9 @@
+lists of libraries names and versions used in the code:
+os
+pickle
+pandas          '1.0.1'
+tqdm            '4.42.1'
+scikit-learn    '0.23.2'
+xgboost         '1.1.1'
+lightgbm        '2.3.1'
+hyperopt        '0.2.4'

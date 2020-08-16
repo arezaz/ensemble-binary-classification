@@ -8,7 +8,6 @@ import lightgbm as lgbm
 from sklearn.model_selection import cross_val_score, train_test_split
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, balanced_accuracy_score, confusion_matrix
 from sklearn.ensemble import VotingClassifier
-from mlxtend.classifier import EnsembleVoteClassifier
 
 from hyperopt import Trials, STATUS_OK, tpe, hp, fmin
 
