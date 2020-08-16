@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 from utils import gen_data, iterModel, MetaClassifier, Sampling
 
 
-EPOCHS = 10 # number times that the flow will work through the entire dataset.
+EPOCHS = 3 # arbitrary number of times that the flow will work through the entire dataset.
 
 for i in tqdm(range(0,EPOCHS)):
 
@@ -40,7 +40,7 @@ for i in tqdm(range(0,EPOCHS)):
     X_res, y_res = Sampling(train_dict['X_train'], train_dict['y_train'], method=method)
     train_dict = {'X_train': X_res, 'y_train':y_res}
 
-    # --------------------------------- III) Machine Learning --------------------------------- #
+    # --------------------------------- III) Model Training ---------------------------------- #
 
     # ---- iterate classification algorithms: XGBoost, LightGBM
     max_evals = 15 # max iters for tunings hyperparameters
@@ -59,7 +59,7 @@ for i in tqdm(range(0,EPOCHS)):
     X_eval['prediction_score_proba'] = y_proba[:,1]
 
     prediction_df = X_eval[['scenario', 'prediction_score','prediction_score_proba']]
-
+    prediction_df.columns = ['dataset_id', 'prediction_score','prediction_score_proba']
     # ------------------------------------ V) Save Outputs ----------------------------------- #
 
     timestr = method+time.strftime("-%Y%m%d-%H%M%S") # create timestamp for saving epoch results
@@ -69,10 +69,10 @@ for i in tqdm(range(0,EPOCHS)):
         os.makedirs(PATH_SAVE)
 
     # ---- A) save evaluation set predictions
-    # --------- 1 - evaluation set prediction with submission format 
+    # ------------ 1 - evaluation set prediction with submission format 
     filename = 'prediction-'+timestr+'.csv'
     prediction_df[['dataset_id', 'prediction_score']].to_csv(pjoin(PATH_SAVE ,filename), index=False)
-    # --------- 2 -evaluation set prediction also outputing predicted probabilities
+    # ------------ 2 -evaluation set prediction also outputing predicted probabilities
     filename = 'prediction_proba-'+timestr+'.csv'
     prediction_df[['dataset_id', 'prediction_score','prediction_score_proba']].to_csv(pjoin(PATH_SAVE ,filename), index=False) 
 
