@@ -16,8 +16,6 @@ The main workflow can be found in `main.py`.
 All functions used in the main flow can be found in `utils.py`.
 After running multiple epochs of the flow use `EpochsAnalysis.ipynb` to compare and select the best epoch.
 
-![Workflow](https://github.com/arezaz/meta-binary-classification/blob/master/Data/pipeline.PNG)
-
 
 Alireza Rezazadeh  
 Spring 2020  
