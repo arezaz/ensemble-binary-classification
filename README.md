@@ -21,6 +21,6 @@ The main workflow can be found in `main.py`.
 All functions used in the main flow can be found in `utils.py`.
 After running multiple epochs of the flow use `EpochsAnalysis.ipynb` to compare and select the best epoch.
 
-Alireza Rezazadeh
-Spring 2020
+Alireza Rezazadeh  
+Spring 2020  
 alr.rezazadeh@gmail.com
