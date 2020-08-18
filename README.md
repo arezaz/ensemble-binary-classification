@@ -19,5 +19,5 @@ After running multiple epochs of the flow use `EpochsAnalysis.ipynb` to compare 
 ![Image of Workflow](https://github.com/arezaz/meta-binary-classification/blob/master/Data/pipeline.PNG)
 
 Alireza Rezazadeh  
-Spring 2020  
+Summer 2020  
 alr.rezazadeh@gmail.com
