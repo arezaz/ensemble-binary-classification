@@ -1,12 +1,5 @@
 # An Ensemble Learning Approach to Binary Classification
 
-Dependencies:
-- [sklearn '0.23.2']
-- [xgboost '1.1.1']
-- [lightgbm '2.3.1']
-- [imblearn '0.7.0']
-- [hyperopt '0.2.4']
-
 ### Overview
 
 Binary classification using a s soft-voting ensemble meta-classifier.
@@ -18,6 +11,21 @@ After running multiple epochs of the flow use `EpochsAnalysis.ipynb` to compare 
 
 ![Image of Workflow](https://github.com/arezaz/meta-binary-classification/blob/master/Data/pipeline.PNG)
 
+### Citation
+If you find this repository useful in your research, please consider citing the paper.
+
+```
+@article{rezazadeh2020generalized,
+  title={A Generalized Flow for B2B Sales Predictive Modeling: An Azure Machine-Learning Approach},
+  author={Rezazadeh, Alireza},
+  journal={Forecasting},
+  volume={2},
+  number={3},
+  pages={267--283},
+  year={2020},
+  publisher={Multidisciplinary Digital Publishing Institute}
+}
+```
 Alireza Rezazadeh  
 Summer 2020  
 alr.rezazadeh@gmail.com
